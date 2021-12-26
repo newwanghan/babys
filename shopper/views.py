@@ -154,7 +154,7 @@ def paysView(request):
         payInfo = dict(price=total, user_id=request.user.id, state='已支付')
         request.session['payInfo'] = payInfo
         request.session['payTime'] = out_trade_no
-        return_url = 'http://' + request.get_host() + '/shopper.html'
+        return_url = 'http://' + request.get_host() + '/shopper/.html'
         url = get_pay(out_trade_no, total, return_url)
         logging.info(url)
         return redirect(url)
