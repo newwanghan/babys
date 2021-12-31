@@ -66,9 +66,20 @@ class indexClassView(TemplateView):
         return self.render_to_response(context)
 
 
+def bad_request(request, exception):
+    """ 400 error handler. """
+    return render(request, '404.html', status=400)
+
+
+def permission_denied(request, exception):
+    """ Permission denied (403) handler. """
+    return render(request, '404.html', status=403)
+
+
 def page_not_found(request, exception):
     return render(request, '404.html', status=404)
 
 
-def page_error(request):
+def server_error(request):
+    """ 500 error handler. """
     return render(request, '404.html', status=500)

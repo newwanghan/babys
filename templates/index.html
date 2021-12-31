@@ -69,7 +69,7 @@
                 <a href="#" class="top-img"><img src="{% static 'img/img12.jpg' %}" alt=""></a>
                 <div class="img-box">
                     {% for c in clothes %}
-{#                        <a href="{% url 'commodity:detail' c.id %}"><img src="{{ c.img.url }}" alt=""></a>#}
+                        <a href="{% url 'commodity:detail' c.id %}"><img src="{{ c.img.url }}" alt=""></a>
                     {% endfor %}
                 </div>
             </div>
@@ -84,7 +84,7 @@
                 <a href="#" class="top-img"><img src="{% static 'img/img12.jpg' %}" alt=""></a>
                 <div class="img-box">
                     {% for f in food %}
-{#                        <a href="{% url 'commodity:detail' f.id %}"><img src="{{ f.img.url }}"></a>#}
+                        <a href="{% url 'commodity:detail' f.id %}"><img src="{{ f.img.url }}" alt=""></a>
                     {% endfor %}
                 </div>
             </div>
@@ -99,7 +99,7 @@
                 <a href="#" class="top-img"><img src="{% static 'img/img12.jpg' %}" alt=""></a>
                 <div class="img-box">
                     {% for g in goods %}
-{#                        <a href="{% url 'commodity:detail' g.id %}"><img src="{{ g.img.url }}"></a>#}
+                        <a href="{% url 'commodity:detail' g.id %}"><img src="{{ g.img.url }}" alt=""></a>
                     {% endfor %}
                 </div>
             </div>
