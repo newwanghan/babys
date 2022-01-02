@@ -5,4 +5,4 @@ import turtle
 import time
 turtle.fillcolor("red")
 print(turtle.fillcolor())
-# time.sleep(4)
+time.sleep(4)

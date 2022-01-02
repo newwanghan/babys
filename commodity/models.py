@@ -12,7 +12,7 @@ class Types(models.Model):
 
     class Meta:
         verbose_name = '商品类型'
-        verbose_name_plural = '商品类型'
+        verbose_name_plural = verbose_name
 
 
 class CommodityInfos(models.Model):
@@ -34,7 +34,7 @@ class CommodityInfos(models.Model):
 
     class Meta:
         verbose_name = '商品信息'
-        verbose_name_plural = '商品信息'
+        verbose_name_plural = verbose_name
 
     def colored_name(self):
         if '童装' in self.types:

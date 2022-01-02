@@ -54,6 +54,7 @@ def commodityView(request):
         commodityInfos = commodityInfos.order_by('-' + s)
     if n:
         commodityInfos = commodityInfos.filter(name__contains=n)
+        
     # 分页功能
     paginator = Paginator(commodityInfos, 6)
     try:

@@ -13,8 +13,9 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout, login, authenticate
 from django.shortcuts import reverse
 from .form import *
+from .pays import get_pay
 
-# https://openhome.alipay.com/docCenter/docCenter.htm
+# https://openhome.alipay.com/docCenter/docCenter.htm 支付宝开放平台
 
 # def loginView(request):
 #     title = '用户登录'
@@ -61,7 +62,6 @@ from .form import *
 #     else:
 #         infos = LoginForm()
 #     return render(request, 'login.html', locals())
-from .pays import get_pay
 
 
 def loginView(request):
