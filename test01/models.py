@@ -1,7 +1,6 @@
 from django.db import models
 
 
-
 class PersonInfo(models.Model):
     name = models.CharField(max_length=20)
     age = models.IntegerField()
@@ -9,7 +8,7 @@ class PersonInfo(models.Model):
 
     def __str__(self):
         return self.name
-    
+
     class Meta:
         verbose_name = '人员信息'
         verbose_name_plural = verbose_name
