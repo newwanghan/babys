@@ -9,6 +9,7 @@ urlpatterns = [
     path('', include(('index.urls', 'index'), namespace='index')),
     path('commodity/', include(('commodity.urls', 'commodity'), namespace='commodity')),
     path('shopper/', include(('shopper.urls', 'shopper'), namespace='shopper')),
+    path('test01/', include(('test01.urls', 'test01'), namespace='test01')),
 
     # 定义媒体资源的路由信息
     re_path(r"media/(?P<path>.*)", serve, {"document_root": settings.MEDIA_ROOT}, name='media'),
