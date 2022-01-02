@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'index',
     'commodity',
     'shopper',
+    'test01',
 ]
 
 MIDDLEWARE = [
