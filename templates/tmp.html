@@ -6,6 +6,12 @@
     <title>测试模板变量的内容</title>
 </head>
 <body>
+
+<p>Published at {% format_time article.pub_date "%Y-%m-%d %I:%M %p" %}.</p>
+<hr>
+{% do_results %}
+{% show_results 10086111 %}
+<hr>
 COOKIE: {{ cookie }}<br><br>
 FILES: {{ files }}<br><br>
 POST: {{ pos }}<br><br>
@@ -34,6 +40,7 @@ get_raw_uri: {{ get_raw_uri }}<br><br>
 {% get_first_article as first_article %}
 <p>第一篇文章: </p>
 <p>{{ first_article.name }}</p>
+<hr>
 
 </body>
 </html>
