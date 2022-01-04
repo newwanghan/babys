@@ -1,0 +1,39 @@
+{% load mytags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试模板变量的内容</title>
+</head>
+<body>
+COOKIE: {{ cookie }}<br><br>
+FILES: {{ files }}<br><br>
+POST: {{ pos }}<br><br>
+GET: {{ ge }}<br><br>
+method: {{ method }}<br><br>
+META: {{ meta }}<br><br>
+path: {{ pa }}<br><br>
+session: {{ session }}<br><br>
+user: {{ user }}<br><br>
+content_type: {{ contenttype }}<br><br>
+content_params: {{ contentparams }}<br><br>
+scheme: {{ scheme }}<br><br>
+is_secure: {{ is_secure }}<br><br>
+is_ajax: {{ is_ajax }}<br><br>
+get_host: {{ get_host }}<br><br>
+get_full_path: {{ get_full_path }}<br><br>
+get_raw_uri: {{ get_raw_uri }}<br><br>
+<hr>
+{% reversal 'Django' %}
+<hr>
+
+<p>文章数: {% total_articles %}</p>
+{% show_latest_articles 6 %}
+
+
+{% get_first_article as first_article %}
+<p>第一篇文章: </p>
+<p>{{ first_article.name }}</p>
+
+</body>
+</html>

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'commodity',
     'shopper',
     'test01',
+    'mydefined',
 ]
 
 MIDDLEWARE = [
@@ -79,7 +80,7 @@ WSGI_APPLICATION = 'babys.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'babys',
+        'NAME': 'tbabys',
         'USER': "root",
         'PASSWORD': "123456",
         'HOST': "192.168.1.9",

@@ -26,3 +26,42 @@ class Vocation(models.Model):
     class Meta:
         verbose_name = '职业信息'
         verbose_name_plural = verbose_name
+
+
+class Province(models.Model):
+    name = models.CharField(max_length=5)
+
+    def __str__(self):
+        return str(self.name)
+
+
+class City(models.Model):
+    name = models.CharField(max_length=5)
+    province = models.ForeignKey(Province, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return str(self.name)
+
+
+class Person(models.Model):
+    name = models.CharField(max_length=10)
+    living = models.ForeignKey(City, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return str(self.name)
+
+
+class Performer(models.Model):
+    name = models.CharField(max_length=20)
+    nationality = models.CharField(max_length=20)
+
+    def __str__(self):
+        return str(self.name)
+
+
+class Program(models.Model):
+    name = models.CharField(max_length=20)
+    performer = models.ManyToManyField(Performer)
+
+    def __str__(self):
+        return self.name
