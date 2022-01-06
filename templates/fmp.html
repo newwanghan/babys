@@ -1,0 +1,12 @@
+{% load myfilter %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试自定义过滤器</title>
+</head>
+<body>
+<div>替换前：{{ value }}</div><br>
+<div>替换后：{{value | replace:'Python:Django'}}</div>
+</body>
+</html>

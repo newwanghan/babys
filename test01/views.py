@@ -7,3 +7,7 @@ def tmp(request):
     poll2 = 200
     poll3 = 300
     return render(request, "tmp.html", locals())
+
+def tmp02(request):
+    value = "Hello Python"
+    return render(request, "fmp.html", locals())
